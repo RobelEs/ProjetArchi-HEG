@@ -32,6 +32,7 @@
             this.gestionDesEmployésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.gestionDesChantiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDesEmployésToolStripMenuItem,
-            this.gestionDesClientsToolStripMenuItem});
+            this.gestionDesClientsToolStripMenuItem,
+            this.gestionDesChantiersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -59,6 +61,12 @@
             this.gestionDesClientsToolStripMenuItem.Name = "gestionDesClientsToolStripMenuItem";
             this.gestionDesClientsToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
             this.gestionDesClientsToolStripMenuItem.Text = "Gestion des clients";
+            // 
+            // gestionDesChantiersToolStripMenuItem
+            // 
+            this.gestionDesChantiersToolStripMenuItem.Name = "gestionDesChantiersToolStripMenuItem";
+            this.gestionDesChantiersToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.gestionDesChantiersToolStripMenuItem.Text = "Gestion des chantiers";
             // 
             // Form1
             // 
@@ -82,6 +90,7 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDesEmployésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDesClientsToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem gestionDesChantiersToolStripMenuItem;
     }
 }
 
