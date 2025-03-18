@@ -64,6 +64,12 @@
     <Compile Include="FormAjouterEmploye.Designer.cs">
       <DependentUpon>FormAjouterEmploye.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModifierEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifierEmploye.Designer.cs">
+      <DependentUpon>FrmModifierEmploye.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FmrGestionEmploye.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterEmploye.resx">
       <DependentUpon>FormAjouterEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifierEmploye.resx">
+      <DependentUpon>FrmModifierEmploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

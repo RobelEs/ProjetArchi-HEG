@@ -26,5 +26,20 @@ namespace ProjetArchi
         {
 
         }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormAjouterEmploye_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

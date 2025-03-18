@@ -19,8 +19,15 @@ namespace ProjetArchi
 
         private void gestionDesEmployésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FmrGestionEmploye gestionEmployeForm = new FmrGestionEmploye();
-            gestionEmployeForm.Show();
+            using (FmrGestionEmploye gestionEmployeForm = new FmrGestionEmploye())
+            {
+                gestionEmployeForm.ShowDialog(); // Affiche la fenêtre en mode bloquant
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
