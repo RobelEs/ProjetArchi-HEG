@@ -1,6 +1,6 @@
 ﻿namespace ProjetArchi
 {
-    partial class FmrGestionEmploye
+    partial class FmrGestionClient
     {
         /// <summary>
         /// Required designer variable.
@@ -28,58 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvEmploye = new System.Windows.Forms.DataGridView();
+            this.dgvClient = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAjouter = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmploye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvEmploye
+            // dgvClient
             // 
-            this.dgvEmploye.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmploye.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nom,
             this.Prenom,
-            this.Role});
-            this.dgvEmploye.Location = new System.Drawing.Point(86, 50);
-            this.dgvEmploye.MinimumSize = new System.Drawing.Size(528, 272);
-            this.dgvEmploye.Name = "dgvEmploye";
-            this.dgvEmploye.ReadOnly = true;
-            this.dgvEmploye.RowHeadersWidth = 51;
-            this.dgvEmploye.RowTemplate.Height = 24;
-            this.dgvEmploye.Size = new System.Drawing.Size(625, 363);
-            this.dgvEmploye.TabIndex = 2;
-            this.dgvEmploye.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Email});
+            this.dgvClient.Location = new System.Drawing.Point(59, 50);
+            this.dgvClient.Name = "dgvClient";
+            this.dgvClient.ReadOnly = true;
+            this.dgvClient.RowHeadersWidth = 51;
+            this.dgvClient.RowTemplate.Height = 24;
+            this.dgvClient.Size = new System.Drawing.Size(628, 344);
+            this.dgvClient.TabIndex = 0;
+            this.dgvClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClient_CellContentClick);
             // 
             // Nom
             // 
             this.Nom.HeaderText = "Nom";
             this.Nom.MinimumWidth = 6;
             this.Nom.Name = "Nom";
-            this.Nom.ReadOnly = true;
             this.Nom.Width = 125;
             // 
             // Prenom
             // 
-            this.Prenom.HeaderText = "Prenom";
+            this.Prenom.HeaderText = "Prénom";
             this.Prenom.MinimumWidth = 6;
             this.Prenom.Name = "Prenom";
-            this.Prenom.ReadOnly = true;
             this.Prenom.Width = 125;
             // 
-            // Role
+            // Email
             // 
-            this.Role.HeaderText = "Role";
-            this.Role.MinimumWidth = 6;
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            this.Role.Width = 125;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.Width = 125;
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(86, 21);
+            this.btnAjouter.Location = new System.Drawing.Point(59, 13);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(75, 23);
             this.btnAjouter.TabIndex = 1;
@@ -87,29 +83,28 @@
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
-            // FmrGestionEmploye
+            // FmrGestionClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(801, 511);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAjouter);
-            this.Controls.Add(this.dgvEmploye);
-            this.MinimumSize = new System.Drawing.Size(691, 469);
-            this.Name = "FmrGestionEmploye";
-            this.Text = "FmrGestionEmploye";
-            this.Load += new System.EventHandler(this.FmrGestionEmploye_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmploye)).EndInit();
+            this.Controls.Add(this.dgvClient);
+            this.Name = "FmrGestionClient";
+            this.Text = "FmrGestionClient";
+            this.Load += new System.EventHandler(this.FmrGestionClient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvEmploye;
-        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.DataGridView dgvClient;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Button btnAjouter;
     }
 }

@@ -32,30 +32,30 @@ namespace ProjetArchi
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             // Ouverture du formulaire pour ajouter un employé
-            using (FormAjouterEmploye formAjouterEmploye = new FormAjouterEmploye())
-            {
-                formAjouterEmploye.ShowDialog();
-            }
+                using (FormAjouterEmploye formAjouterEmploye = new FormAjouterEmploye())
+                {
+                    formAjouterEmploye.ShowDialog();
+                }
         }
 
         private void FmrGestionEmploye_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("Alice", "Dupont", "Développeur");
-            dataGridView1.Rows.Add("Bob", "Martin", "Manager");
-            dataGridView1.Rows.Add("Charlie", "Durand", "Technicien");
-            dataGridView1.Rows.Add("Charlie", "Delta", "Technicien");
+            dgvEmploye.Rows.Add("Alice", "Dupont", "Développeur");
+            dgvEmploye.Rows.Add("Bob", "Martin", "Manager");
+            dgvEmploye.Rows.Add("Charlie", "Durand", "Technicien");
+            dgvEmploye.Rows.Add("Charlie", "Delta", "Technicien");
 
 
             
 
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSteelBlue;
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvEmploye.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEmploye.BorderStyle = BorderStyle.Fixed3D;
+            dgvEmploye.BackgroundColor = Color.White;
+            dgvEmploye.ColumnHeadersDefaultCellStyle.BackColor = Color.LightSkyBlue;
+            dgvEmploye.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvEmploye.DefaultCellStyle.SelectionBackColor = Color.LightSteelBlue;
+            dgvEmploye.DefaultCellStyle.SelectionForeColor = Color.Black;
 
             // Personnalisation du bouton Ajouter
 

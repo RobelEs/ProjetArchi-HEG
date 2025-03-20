@@ -1,6 +1,6 @@
 ﻿namespace ProjetArchi
 {
-    partial class FormAjouterEmploye
+    partial class FmrAjouterClient
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.grpInformation = new System.Windows.Forms.GroupBox();
             this.btnValider = new System.Windows.Forms.Button();
-            this.lblRole = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.txtRole = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.grpInformation.SuspendLayout();
             this.SuspendLayout();
@@ -49,19 +49,18 @@
             // grpInformation
             // 
             this.grpInformation.Controls.Add(this.btnValider);
-            this.grpInformation.Controls.Add(this.lblRole);
+            this.grpInformation.Controls.Add(this.lblEmail);
             this.grpInformation.Controls.Add(this.lblPrenom);
             this.grpInformation.Controls.Add(this.lblNom);
-            this.grpInformation.Controls.Add(this.txtRole);
+            this.grpInformation.Controls.Add(this.txtEmail);
             this.grpInformation.Controls.Add(this.txtPrenom);
             this.grpInformation.Controls.Add(this.txtNom);
-            this.grpInformation.Location = new System.Drawing.Point(12, 12);
+            this.grpInformation.Location = new System.Drawing.Point(24, 12);
             this.grpInformation.Name = "grpInformation";
             this.grpInformation.Size = new System.Drawing.Size(427, 303);
-            this.grpInformation.TabIndex = 1;
+            this.grpInformation.TabIndex = 2;
             this.grpInformation.TabStop = false;
             this.grpInformation.Text = "Information";
-            this.grpInformation.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnValider
             // 
@@ -73,14 +72,14 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
-            // lblRole
+            // lblEmail
             // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(23, 179);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(36, 16);
-            this.lblRole.TabIndex = 4;
-            this.lblRole.Text = "Rôle";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(23, 179);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.TabIndex = 4;
+            this.lblEmail.Text = "Email";
             // 
             // lblPrenom
             // 
@@ -90,7 +89,6 @@
             this.lblPrenom.Size = new System.Drawing.Size(54, 16);
             this.lblPrenom.TabIndex = 2;
             this.lblPrenom.Text = "Prénom";
-            this.lblPrenom.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblNom
             // 
@@ -100,14 +98,13 @@
             this.lblNom.Size = new System.Drawing.Size(36, 16);
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom";
-            this.lblNom.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtRole
+            // txtEmail
             // 
-            this.txtRole.Location = new System.Drawing.Point(200, 176);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(200, 22);
-            this.txtRole.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(200, 176);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 22);
+            this.txtEmail.TabIndex = 5;
             // 
             // txtPrenom
             // 
@@ -116,17 +113,14 @@
             this.txtPrenom.Size = new System.Drawing.Size(200, 22);
             this.txtPrenom.TabIndex = 3;
             // 
-            // FormAjouterEmploye
+            // FmrAjouterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(540, 366);
+            this.ClientSize = new System.Drawing.Size(486, 337);
             this.Controls.Add(this.grpInformation);
-            this.MinimumSize = new System.Drawing.Size(558, 413);
-            this.Name = "FormAjouterEmploye";
-            this.Text = "FormAjouterEmploye";
-            this.Load += new System.EventHandler(this.FormAjouterEmploye_Load);
+            this.Name = "FmrAjouterClient";
+            this.Text = "FmrAjouterClient";
             this.grpInformation.ResumeLayout(false);
             this.grpInformation.PerformLayout();
             this.ResumeLayout(false);
@@ -137,11 +131,11 @@
 
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.GroupBox grpInformation;
-        private System.Windows.Forms.TextBox txtRole;
-        private System.Windows.Forms.TextBox txtPrenom;
-        private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.Label lblPrenom;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPrenom;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPrenom;
     }
 }

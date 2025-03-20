@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmrAjouterClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAjouterClient.Designer.cs">
+      <DependentUpon>FmrAjouterClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrGestionClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrGestionClient.Designer.cs">
+      <DependentUpon>FmrGestionClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmrGestionEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmrGestionEmploye.Designer.cs">
       <DependentUpon>FmrGestionEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrModifierClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrModifierClient.Designer.cs">
+      <DependentUpon>FmrModifierClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,8 +90,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrAjouterClient.resx">
+      <DependentUpon>FmrAjouterClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrGestionClient.resx">
+      <DependentUpon>FmrGestionClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrGestionEmploye.resx">
       <DependentUpon>FmrGestionEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrModifierClient.resx">
+      <DependentUpon>FmrModifierClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

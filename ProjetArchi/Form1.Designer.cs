@@ -45,33 +45,35 @@
             this.gestionDesChantiersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gestionDesEmployésToolStripMenuItem
             // 
             this.gestionDesEmployésToolStripMenuItem.Name = "gestionDesEmployésToolStripMenuItem";
-            this.gestionDesEmployésToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.gestionDesEmployésToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.gestionDesEmployésToolStripMenuItem.Text = "&Gestion des employés";
             this.gestionDesEmployésToolStripMenuItem.Click += new System.EventHandler(this.gestionDesEmployésToolStripMenuItem_Click);
             // 
             // gestionDesClientsToolStripMenuItem
             // 
             this.gestionDesClientsToolStripMenuItem.Name = "gestionDesClientsToolStripMenuItem";
-            this.gestionDesClientsToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
-            this.gestionDesClientsToolStripMenuItem.Text = "Gestion des clients";
+            this.gestionDesClientsToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.gestionDesClientsToolStripMenuItem.Text = "Gestion &des clients";
+            this.gestionDesClientsToolStripMenuItem.Click += new System.EventHandler(this.gestionDesClientsToolStripMenuItem_Click);
             // 
             // gestionDesChantiersToolStripMenuItem
             // 
             this.gestionDesChantiersToolStripMenuItem.Name = "gestionDesChantiersToolStripMenuItem";
-            this.gestionDesChantiersToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
-            this.gestionDesChantiersToolStripMenuItem.Text = "Gestion des chantiers";
+            this.gestionDesChantiersToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.gestionDesChantiersToolStripMenuItem.Text = "Gestion des &chantiers";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

@@ -29,5 +29,14 @@ namespace ProjetArchi
         {
 
         }
+
+        private void gestionDesClientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FmrGestionClient gestionClientForm = new FmrGestionClient())
+            {
+                gestionClientForm.ShowDialog(); 
+            }
+
+        }
     }
 }
