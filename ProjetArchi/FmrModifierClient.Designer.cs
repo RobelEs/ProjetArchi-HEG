@@ -47,8 +47,8 @@
             this.btnValider.Location = new System.Drawing.Point(142, 221);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(200, 30);
-            this.btnValider.TabIndex = 13;
-            this.btnValider.Text = "Valider les modifications";
+            this.btnValider.TabIndex = 7;
+            this.btnValider.Text = "&Modifier";
             this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
@@ -58,7 +58,7 @@
             this.txtEmail.Location = new System.Drawing.Point(142, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 27);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtPrenom
             // 
@@ -66,7 +66,7 @@
             this.txtPrenom.Location = new System.Drawing.Point(142, 85);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(200, 27);
-            this.txtPrenom.TabIndex = 10;
+            this.txtPrenom.TabIndex = 3;
             // 
             // txtNom
             // 
@@ -74,7 +74,7 @@
             this.txtNom.Location = new System.Drawing.Point(142, 35);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(200, 27);
-            this.txtNom.TabIndex = 8;
+            this.txtNom.TabIndex = 1;
             // 
             // lblEmail
             // 
@@ -83,7 +83,7 @@
             this.lblEmail.Location = new System.Drawing.Point(42, 139);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 19);
-            this.lblEmail.TabIndex = 11;
+            this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "Email:";
             // 
             // lblPrenom
@@ -93,7 +93,7 @@
             this.lblPrenom.Location = new System.Drawing.Point(42, 89);
             this.lblPrenom.Name = "lblPrenom";
             this.lblPrenom.Size = new System.Drawing.Size(71, 19);
-            this.lblPrenom.TabIndex = 9;
+            this.lblPrenom.TabIndex = 2;
             this.lblPrenom.Text = "Prénom:";
             // 
             // lblNom
@@ -103,7 +103,7 @@
             this.lblNom.Location = new System.Drawing.Point(42, 39);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(47, 19);
-            this.lblNom.TabIndex = 7;
+            this.lblNom.TabIndex = 0;
             this.lblNom.Text = "&Nom:";
             // 
             // btnSupprimer
@@ -114,8 +114,8 @@
             this.btnSupprimer.Location = new System.Drawing.Point(142, 257);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(200, 30);
-            this.btnSupprimer.TabIndex = 14;
-            this.btnSupprimer.Text = "Supprimer le client";
+            this.btnSupprimer.TabIndex = 8;
+            this.btnSupprimer.Text = "&Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = false;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
@@ -127,8 +127,8 @@
             this.btnAjouter.Location = new System.Drawing.Point(142, 185);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(200, 30);
-            this.btnAjouter.TabIndex = 15;
-            this.btnAjouter.Text = "Ajouter";
+            this.btnAjouter.TabIndex = 6;
+            this.btnAjouter.Text = "&Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
@@ -136,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(501, 329);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnSupprimer);

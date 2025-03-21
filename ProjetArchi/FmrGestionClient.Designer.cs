@@ -43,7 +43,7 @@
             this.Nom,
             this.Prenom,
             this.Email});
-            this.dgvClient.Location = new System.Drawing.Point(59, 50);
+            this.dgvClient.Location = new System.Drawing.Point(59, 64);
             this.dgvClient.Name = "dgvClient";
             this.dgvClient.ReadOnly = true;
             this.dgvClient.RowHeadersWidth = 51;
@@ -57,6 +57,7 @@
             this.Nom.HeaderText = "Nom";
             this.Nom.MinimumWidth = 6;
             this.Nom.Name = "Nom";
+            this.Nom.ReadOnly = true;
             this.Nom.Width = 125;
             // 
             // Prenom
@@ -64,6 +65,7 @@
             this.Prenom.HeaderText = "Prénom";
             this.Prenom.MinimumWidth = 6;
             this.Prenom.Name = "Prenom";
+            this.Prenom.ReadOnly = true;
             this.Prenom.Width = 125;
             // 
             // Email
@@ -71,6 +73,7 @@
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             this.Email.Width = 125;
             // 
             // btnAjouter
@@ -88,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(823, 494);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.dgvClient);
             this.Name = "FmrGestionClient";

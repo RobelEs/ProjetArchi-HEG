@@ -32,9 +32,9 @@ namespace ProjetArchi
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             // Ouverture du formulaire pour ajouter un employé
-                using (FormAjouterEmploye formAjouterEmploye = new FormAjouterEmploye())
+                using (FrmModifierEmploye formModifierEmploye = new FrmModifierEmploye(true))
                 {
-                    formAjouterEmploye.ShowDialog();
+                formModifierEmploye.ShowDialog();
                 }
         }
 

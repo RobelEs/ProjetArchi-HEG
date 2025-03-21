@@ -38,5 +38,13 @@ namespace ProjetArchi
             }
 
         }
+
+        private void gestionDesChantiersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FmrGestionChantier gestionChantierForm = new FmrGestionChantier())
+            {
+                gestionChantierForm.ShowDialog();
+            }
+        }
     }
 }

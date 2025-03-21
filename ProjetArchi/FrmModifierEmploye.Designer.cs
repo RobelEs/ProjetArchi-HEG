@@ -31,6 +31,7 @@
             this.txtRole = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnAjouter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNom
@@ -98,11 +99,11 @@
             this.btnValider.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnValider.Font = new System.Drawing.Font("Arial", 10F);
             this.btnValider.ForeColor = System.Drawing.Color.White;
-            this.btnValider.Location = new System.Drawing.Point(150, 200);
+            this.btnValider.Location = new System.Drawing.Point(150, 234);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(200, 30);
-            this.btnValider.TabIndex = 6;
-            this.btnValider.Text = "Valider les modifications";
+            this.btnValider.TabIndex = 7;
+            this.btnValider.Text = "&Modifier";
             this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
@@ -111,20 +112,34 @@
             this.btnSupprimer.BackColor = System.Drawing.Color.Red;
             this.btnSupprimer.Font = new System.Drawing.Font("Arial", 10F);
             this.btnSupprimer.ForeColor = System.Drawing.Color.White;
-            this.btnSupprimer.Location = new System.Drawing.Point(150, 236);
+            this.btnSupprimer.Location = new System.Drawing.Point(150, 270);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(200, 30);
-            this.btnSupprimer.TabIndex = 15;
-            this.btnSupprimer.Text = "Supprimer l\'employe";
+            this.btnSupprimer.TabIndex = 8;
+            this.btnSupprimer.Text = "&Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = false;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
+            // 
+            // btnAjouter
+            // 
+            this.btnAjouter.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAjouter.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnAjouter.ForeColor = System.Drawing.Color.White;
+            this.btnAjouter.Location = new System.Drawing.Point(150, 189);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(200, 30);
+            this.btnAjouter.TabIndex = 6;
+            this.btnAjouter.Text = "&Ajouter";
+            this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // FrmModifierEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(443, 308);
+            this.ClientSize = new System.Drawing.Size(482, 343);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtRole);
@@ -136,11 +151,13 @@
             this.MinimumSize = new System.Drawing.Size(385, 285);
             this.Name = "FrmModifierEmploye";
             this.Text = "Modifier un Employé";
+            this.Load += new System.EventHandler(this.FrmModifierEmploye_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         private System.Windows.Forms.Button btnSupprimer;
+        private System.Windows.Forms.Button btnAjouter;
     }
 }

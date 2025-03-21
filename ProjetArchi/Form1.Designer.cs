@@ -68,6 +68,7 @@
             this.gestionDesChantiersToolStripMenuItem.Name = "gestionDesChantiersToolStripMenuItem";
             this.gestionDesChantiersToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.gestionDesChantiersToolStripMenuItem.Text = "Gestion des &chantiers";
+            this.gestionDesChantiersToolStripMenuItem.Click += new System.EventHandler(this.gestionDesChantiersToolStripMenuItem_Click);
             // 
             // Form1
             // 

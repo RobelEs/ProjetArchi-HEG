@@ -12,9 +12,12 @@ namespace ProjetArchi
 {
     public partial class FrmModifierEmploye : Form
     {
-        public FrmModifierEmploye()
+        public FrmModifierEmploye(Boolean creat = false)
         {
             InitializeComponent();
+            btnSupprimer.Visible = !creat;
+            btnValider.Visible = !creat;
+            btnAjouter.Visible = creat;
         }
 
         private void FrmModifierEmploye_Load(object sender, EventArgs e)
@@ -38,6 +41,7 @@ namespace ProjetArchi
             // Logique pour enregistrer les modifications
             MessageBox.Show($"Modifications enregistrées:\nNom: {nom}\nPrénom: {prenom}\nRôle: {role}",
                 "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void lblPrenom_Click(object sender, EventArgs e)
@@ -74,6 +78,34 @@ namespace ProjetArchi
         {
             this.Close();
 
+        }
+
+        private void FrmModifierEmploye_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            string nom = txtNom.Text;
+            string prenom = txtPrenom.Text;
+            string role = txtRole.Text;
+
+            // Vérification que les champs ne sont pas vides
+            if (string.IsNullOrWhiteSpace(nom) || string.IsNullOrWhiteSpace(prenom) || string.IsNullOrWhiteSpace(role))
+            {
+                MessageBox.Show("Tous les champs doivent être remplis", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Confirmation de l'ajout
+            MessageBox.Show($"Employé ajouté :\nNom : {nom}\nPrénom : {prenom}\nRôle : {role}",
+                "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Nettoyer les champs après l'ajout
+            txtNom.Clear();
+            txtPrenom.Clear();
+            txtRole.Clear();
         }
     }
 }

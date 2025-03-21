@@ -92,7 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(801, 511);
+            this.ClientSize = new System.Drawing.Size(748, 443);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.dgvEmploye);
             this.MinimumSize = new System.Drawing.Size(691, 469);

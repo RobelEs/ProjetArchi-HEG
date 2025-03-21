@@ -29,13 +29,19 @@ namespace ProjetArchi
         {
             if (e.RowIndex >= 0)
             {
+                // Récupérer les données de la ligne sélectionnée
+                string nom = dgvClient.Rows[e.RowIndex].Cells["Nom"].Value.ToString();
+                string prenom = dgvClient.Rows[e.RowIndex].Cells["Prenom"].Value.ToString();
+                string email = dgvClient.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+
+                // Créer le formulaire de modification et passer les données
                 using (FmrModifierClient modifierClientForm = new FmrModifierClient())
                 {
+                    modifierClientForm.SetClientData(nom, prenom, email);
                     modifierClientForm.ShowDialog();
                 }
             }
         }
-
         private void FmrGestionClient_Load(object sender, EventArgs e)
         {
             dgvClient.Rows.Add("Ro", "Afu", "afu@gmail.com");
