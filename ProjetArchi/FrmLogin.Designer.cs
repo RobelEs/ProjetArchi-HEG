@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUtilisateur = new System.Windows.Forms.TextBox();
-            this.txtMdp = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblMdp = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtUtilisateur
+            // txtEmail
             // 
-            this.txtUtilisateur.Location = new System.Drawing.Point(211, 67);
-            this.txtUtilisateur.Name = "txtUtilisateur";
-            this.txtUtilisateur.Size = new System.Drawing.Size(100, 22);
-            this.txtUtilisateur.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(211, 67);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(175, 22);
+            this.txtEmail.TabIndex = 1;
             // 
-            // txtMdp
+            // txtPassword
             // 
-            this.txtMdp.Location = new System.Drawing.Point(211, 111);
-            this.txtMdp.Name = "txtMdp";
-            this.txtMdp.Size = new System.Drawing.Size(100, 22);
-            this.txtMdp.TabIndex = 3;
+            this.txtPassword.Location = new System.Drawing.Point(211, 111);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(175, 22);
+            this.txtPassword.TabIndex = 3;
             // 
             // lblNom
             // 
@@ -85,12 +85,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(504, 241);
+            this.ClientSize = new System.Drawing.Size(622, 349);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.lblNom);
-            this.Controls.Add(this.txtMdp);
-            this.Controls.Add(this.txtUtilisateur);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.ResumeLayout(false);
@@ -100,8 +100,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUtilisateur;
-        private System.Windows.Forms.TextBox txtMdp;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblMdp;
         private System.Windows.Forms.Button btnLogin;

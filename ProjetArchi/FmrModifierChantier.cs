@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetArchi
 {
-    public partial class FmrModifierChantier: Form
+    public partial class FmrModifierChantier : Form
     {
         public FmrModifierChantier(Boolean creat = false)
         {
