@@ -15,26 +15,17 @@ namespace ProjetArchi
 {
     public partial class FrmLogin : Form
     {
-        // --- MODIFICATION : Instance HttpClient statique et readonly ---
-        // Créer une seule instance HttpClient pour être réutilisée.
-        // 'static' signifie qu'elle appartient à la classe FrmLogin, pas à une instance spécifique.
-        // 'readonly' signifie qu'elle ne peut être assignée qu'ici ou dans un constructeur statique.
         private static readonly HttpClient client = new HttpClient();
 
         public FrmLogin()
         {
             InitializeComponent();
-
-            // --- MODIFICATION : Configurer le client HttpClient une seule fois ---
-            // Déplacer la configuration de base ici (ou dans un constructeur statique si plus complexe).
-            // TODO: Pour une meilleure pratique, cette URL devrait provenir d'un fichier de configuration (App.config).
             // client.BaseAddress = new Uri(ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "http://127.0.0.1:8000/api/");
             client.BaseAddress = new Uri("http://127.0.0.1:8000/api/");
 
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            // --- FIN MODIFICATION ---
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,18 +62,11 @@ namespace ProjetArchi
 
                 MessageBox.Show("Connexion réussie !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Cacher le formulaire de login au lieu de le fermer 
-                // this.Hide(); // Ou this.Close() 
-
                 using (Form1 form1 = new Form1())
                 {
-                    // Vous pourriez vouloir passer le token ou d'autres infos à Form1 via son constructeur
-                    // Form1 form1 = new Form1(token);
+
                     form1.ShowDialog(); // Bloque jusqu'à ce que form1 soit fermé
                 }
-
-                // Si vous avez utilisé Hide(), vous pouvez fermer le login ici après que Form1 soit fermé
-                // this.Close();
 
             }
             catch (HttpRequestException httpEx) // Capturer l'exception spécifique lancée par LoginAsync
@@ -106,13 +90,6 @@ namespace ProjetArchi
         // Méthode pour effectuer la requête de connexion à l'API
         private async Task<string> LoginAsync(string email, string password)
         {
-            // --- MODIFICATION : Utiliser le client statique ---
-            // Supprimer : using (HttpClient client = new HttpClient())
-            // Supprimer : client.BaseAddress = ...
-            // Supprimer : client.DefaultRequestHeaders.Accept.Clear(); ...
-            // Nous utilisons maintenant l'instance 'client' statique configurée dans le constructeur.
-            // --- FIN MODIFICATION ---
-
             var data = new
             {
                 email = email,
@@ -166,5 +143,9 @@ namespace ProjetArchi
             }
         }
 
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

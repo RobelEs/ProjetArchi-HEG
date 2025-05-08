@@ -39,6 +39,8 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.txtDateFin = new System.Windows.Forms.TextBox();
             this.lblDateFin = new System.Windows.Forms.Label();
+            this.clientId = new System.Windows.Forms.TextBox();
+            this.client = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAjouter
@@ -46,7 +48,7 @@
             this.btnAjouter.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAjouter.Font = new System.Drawing.Font("Arial", 10F);
             this.btnAjouter.ForeColor = System.Drawing.Color.White;
-            this.btnAjouter.Location = new System.Drawing.Point(192, 240);
+            this.btnAjouter.Location = new System.Drawing.Point(192, 281);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(200, 30);
             this.btnAjouter.TabIndex = 8;
@@ -59,7 +61,7 @@
             this.btnSupprimer.BackColor = System.Drawing.Color.Red;
             this.btnSupprimer.Font = new System.Drawing.Font("Arial", 10F);
             this.btnSupprimer.ForeColor = System.Drawing.Color.White;
-            this.btnSupprimer.Location = new System.Drawing.Point(192, 312);
+            this.btnSupprimer.Location = new System.Drawing.Point(192, 353);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(200, 30);
             this.btnSupprimer.TabIndex = 10;
@@ -72,7 +74,7 @@
             this.btnModifier.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnModifier.Font = new System.Drawing.Font("Arial", 10F);
             this.btnModifier.ForeColor = System.Drawing.Color.White;
-            this.btnModifier.Location = new System.Drawing.Point(192, 276);
+            this.btnModifier.Location = new System.Drawing.Point(192, 317);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(200, 30);
             this.btnModifier.TabIndex = 9;
@@ -152,12 +154,33 @@
             this.lblDateFin.TabIndex = 6;
             this.lblDateFin.Text = "DateDebut:";
             // 
+            // clientId
+            // 
+            this.clientId.Font = new System.Drawing.Font("Arial", 10F);
+            this.clientId.Location = new System.Drawing.Point(192, 237);
+            this.clientId.Name = "clientId";
+            this.clientId.Size = new System.Drawing.Size(200, 27);
+            this.clientId.TabIndex = 11;
+            // 
+            // client
+            // 
+            this.client.AutoSize = true;
+            this.client.Font = new System.Drawing.Font("Arial", 10F);
+            this.client.Location = new System.Drawing.Point(58, 245);
+            this.client.Name = "client";
+            this.client.Size = new System.Drawing.Size(69, 19);
+            this.client.TabIndex = 12;
+            this.client.Text = "client_id";
+            this.client.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FmrModifierChantier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(504, 401);
+            this.Controls.Add(this.client);
+            this.Controls.Add(this.clientId);
             this.Controls.Add(this.lblDateFin);
             this.Controls.Add(this.txtDateFin);
             this.Controls.Add(this.btnAjouter);
@@ -190,5 +213,7 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.TextBox txtDateFin;
         private System.Windows.Forms.Label lblDateFin;
+        private System.Windows.Forms.TextBox clientId;
+        private System.Windows.Forms.Label client;
     }
 }

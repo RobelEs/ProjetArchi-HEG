@@ -29,25 +29,37 @@
         private void InitializeComponent()
         {
             this.dgvChantier = new System.Windows.Forms.DataGridView();
+            this.btnAjouter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChantier)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvChantier
             // 
             this.dgvChantier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChantier.Location = new System.Drawing.Point(65, 22);
+            this.dgvChantier.Location = new System.Drawing.Point(82, 69);
             this.dgvChantier.Name = "dgvChantier";
             this.dgvChantier.RowHeadersWidth = 51;
             this.dgvChantier.RowTemplate.Height = 24;
-            this.dgvChantier.Size = new System.Drawing.Size(952, 609);
+            this.dgvChantier.Size = new System.Drawing.Size(935, 562);
             this.dgvChantier.TabIndex = 0;
             this.dgvChantier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChantier_CellContentClick);
+            // 
+            // btnAjouter
+            // 
+            this.btnAjouter.Location = new System.Drawing.Point(82, 29);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(75, 23);
+            this.btnAjouter.TabIndex = 2;
+            this.btnAjouter.Text = "&Ajouter";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // FmrGestionChantier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 671);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.dgvChantier);
             this.Name = "FmrGestionChantier";
             this.Text = "FmrGestionChantier";
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvChantier;
+        private System.Windows.Forms.Button btnAjouter;
     }
 }

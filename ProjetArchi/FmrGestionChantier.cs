@@ -207,7 +207,27 @@ namespace ProjetArchi
         {
             if (e.RowIndex >= 0)
             {
+                int chantierId = (int)dgvChantier.Rows[e.RowIndex].Cells["id"].Value;
+                var chantier = _listeChantiers.FirstOrDefault(c => c.Id == chantierId);
+                // Ouvre le formulaire de modification
+                if (chantier != null)
+                {
+                    using (FmrModifierChantier modifierChantierForm = new FmrModifierChantier(chantier))
+                    {
+                        modifierChantierForm.ShowDialog();
+                        // Recharge les données après la fermeture du formulaire
+                        // ChargerDonneesChantiersAsync();
+                    }
+                }
+            }
+        }
 
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            using (FmrModifierChantier form = new FmrModifierChantier(new ChantierModel(), true))
+            {
+                form.ShowDialog();
+               
             }
         }
     }
