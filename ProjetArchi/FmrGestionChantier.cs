@@ -230,5 +230,95 @@ namespace ProjetArchi
                
             }
         }
+
+        private void AppliquerFiltreEtTri()
+        {
+            // S'assurer que la liste source existe
+            if (_listeChantiers == null)
+            {
+                dgvChantier.Rows.Clear(); // Vide le DGV si pas de données sources
+                return;
+            }
+
+            string texteRecherche = trier.Text.Trim().ToLower();
+            string critereTri = cmbTri.SelectedItem?.ToString();
+            IEnumerable<ChantierModel> chantiersAffiches = _listeChantiers;
+
+            if (!string.IsNullOrWhiteSpace(texteRecherche))
+            {
+                chantiersAffiches = chantiersAffiches.Where(c =>
+                    (c.Name != null && c.Name.ToLower().Contains(texteRecherche)) ||
+                    (c.Address != null && c.Address.ToLower().Contains(texteRecherche)) ||
+                    // Pour StartDate et EndDate: si ce sont des chaînes, la recherche par Contains est directe.
+                    (c.StartDate != null && c.StartDate.ToLower().Contains(texteRecherche)) ||
+                    (c.EndDate != null && c.EndDate.ToLower().Contains(texteRecherche)) ||
+                    // Pour ClientId (qui est un int ici): le convertir en chaîne pour la recherche.
+                    (c.ClientId.ToString().ToLower().Contains(texteRecherche))
+                // Si vous avez d'autres champs numériques ou dates à filtrer comme du texte,
+                // convertissez-les en .ToString() et comparez.
+                );
+            }
+
+            // --- ÉTAPE 2: TRI ---
+            // Appliquer le tri basé sur la sélection du ComboBox
+            switch (critereTri)
+            {
+                case "Name":
+                    chantiersAffiches = chantiersAffiches.OrderBy(c => c.Name);
+                    break;
+                case "Address":
+                    chantiersAffiches = chantiersAffiches.OrderBy(c => c.Address);
+                    break;
+                case "StartDate":
+                    chantiersAffiches = chantiersAffiches.OrderBy(c =>
+                        DateTime.TryParse(c.StartDate, out DateTime startDate) ? startDate : DateTime.MinValue
+                    );
+                    break;
+                case "EndDate":
+                    chantiersAffiches = chantiersAffiches.OrderBy(c =>
+                        DateTime.TryParse(c.EndDate, out DateTime endDate) ? endDate : DateTime.MinValue
+                    );
+                    break;
+                case "ClientId":
+                    chantiersAffiches = chantiersAffiches.OrderBy(c => c.ClientId);
+                    break;
+                default:
+                    if (chantiersAffiches.Any())
+                    {
+                        chantiersAffiches = chantiersAffiches.OrderBy(c => c.Name); // Tri par défaut
+                    }
+                    break;
+            }
+            dgvChantier.SuspendLayout(); // Suspend le rafraîchissement pour de meilleures performances
+            dgvChantier.Rows.Clear();   // Vide les lignes existantes
+
+            if (chantiersAffiches != null) // Vérification supplémentaire (devrait toujours être vrai ici)
+            {
+                foreach (var chantier in chantiersAffiches)
+                {
+                    dgvChantier.Rows.Add(
+                        chantier.Id,
+                        chantier.Name,
+                        chantier.Address,
+                        chantier.StartDate,
+                        chantier.EndDate,
+                        chantier.ClientId
+                    );
+                }
+            }
+            dgvChantier.ResumeLayout(); // Réactive le rafraîchissement
+        }
+
+
+        private void trier_TextChanged(object sender, EventArgs e)
+        {
+            AppliquerFiltreEtTri();
+
+        }
+
+        private void cmbTri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AppliquerFiltreEtTri();
+        }
     }
 }

@@ -161,6 +161,7 @@ namespace ProjetArchi
             string dateFin = txtDateFin.Text;
             int client_id = Convert.ToInt32(clientId.Text);
 
+
             // Vérification que les champs ne sont pas vides
             if (string.IsNullOrWhiteSpace(nom) || string.IsNullOrWhiteSpace(adresse) ||
                 string.IsNullOrWhiteSpace(dateDebut) || string.IsNullOrWhiteSpace(dateFin))
