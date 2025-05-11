@@ -33,6 +33,7 @@ namespace ProjetArchi
             txtAdresse.Text = _chantier.Address;
             txtDateDebut.Text = _chantier.StartDate;
             txtDateFin.Text = _chantier.EndDate;
+            clientId.Text = _chantier.ClientId.ToString();
 
         }
 

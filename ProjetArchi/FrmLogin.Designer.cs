@@ -39,15 +39,16 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(211, 67);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(175, 22);
+            this.txtEmail.Size = new System.Drawing.Size(285, 22);
             this.txtEmail.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(211, 111);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(175, 22);
+            this.txtPassword.Size = new System.Drawing.Size(285, 22);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblNom
             // 
@@ -72,7 +73,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.LimeGreen;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(211, 157);
+            this.btnLogin.Location = new System.Drawing.Point(396, 152);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 23);
             this.btnLogin.TabIndex = 4;

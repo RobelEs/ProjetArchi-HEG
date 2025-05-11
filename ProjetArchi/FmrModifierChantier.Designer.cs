@@ -150,9 +150,9 @@
             this.lblDateFin.Font = new System.Drawing.Font("Arial", 10F);
             this.lblDateFin.Location = new System.Drawing.Point(58, 195);
             this.lblDateFin.Name = "lblDateFin";
-            this.lblDateFin.Size = new System.Drawing.Size(91, 19);
+            this.lblDateFin.Size = new System.Drawing.Size(71, 19);
             this.lblDateFin.TabIndex = 6;
-            this.lblDateFin.Text = "DateDebut:";
+            this.lblDateFin.Text = "DateFin:";
             // 
             // clientId
             // 
